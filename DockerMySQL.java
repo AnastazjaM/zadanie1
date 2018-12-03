@@ -29,15 +29,15 @@ public class DockerMySQL {
       String dropTable, createTable, initInsert, insert, sql;
       
       System.out.println("Droping table...");
-      dropTable= "DROP TABLE IF EXISTS Studenci";
+      dropTable = "DROP TABLE IF EXISTS Studenci";
       stmt.executeUpdate(dropTable);
       
       System.out.println("Creating table...");
-      createTable= "CREATE TABLE Studenci (Id int, imie varchar(255), nazwisko varchar(255))";
+      createTable = "CREATE TABLE Studenci (Id int, imie varchar(255), nazwisko varchar(255))";
       stmt.executeUpdate(createTable);
       
       System.out.println("Filling table...");
-      initInsert= "INSERT INTO Studenci (Id, imie, nazwisko) VALUES (1,'Katarzyna','Wisniewska')"+",(2,'Jan','Kowalski'),(3,'Michal','Wozniak');";
+      initInsert = "INSERT INTO Studenci (Id, imie, nazwisko) VALUES (1,'Katarzyna','Wisniewska')"+",(2,'Jan','Kowalski'),(3,'Michal','Wozniak');";
       stmt.executeUpdate(initInsert);
       
       sql = "SELECT * FROM Studenci";
@@ -45,7 +45,7 @@ public class DockerMySQL {
       
       int id;
       String imie, nazwisko;
-      Boolean = false;
+      Boolean exit = false;
       while(!exit){
       System.out.println("Wybierz jedną z możliwych opcji:");
       System.out.println("[1] Wyświetl zawartość bazy danych");
