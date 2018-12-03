@@ -63,13 +63,13 @@ public class DockerMySQL {
           break;
        case 2:
          System.out.println("Podaj id: ");
-         id=intput.nextInt();
+         id=input.nextInt();
          System.out.println("Podaj imie: ");
-         imie=intput.next();
+         imie=input.next();
          System.out.println("Podaj nazwisko: ");
-         nazwisko=intput.next();
+         nazwisko=input.next();
          
-         insert+="("+_id+",'"+imie+"','"+nazwisko+"');";
+         insert+="("+id+",'"+imie+"','"+nazwisko+"');";
          stmt.executeUpdate(insert);
          break;
        case 3:
