@@ -43,6 +43,8 @@ public class DockerMySQL {
       sql = "SELECT * FROM Studenci";
       insert = "INSERT INTO Studenci (Id, imie, nazwisko) VALUES";
       
+      Scanner input = new Scanner (System.in);
+      
       int id;
       String imie, nazwisko;
       Boolean exit = false;
