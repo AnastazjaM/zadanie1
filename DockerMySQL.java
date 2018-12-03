@@ -78,33 +78,28 @@ public class DockerMySQL {
          exit = true;
          break;
        default:
-       System.out.println("Nie ma takiej opcji!");
-        }
+            System.out.println("Nie ma takiej opcji");
+            }
       }
       stmt.close();
       conn.close();
-      }
-      catch(SQLException se){
-        se.printStackTrace();
-      }
-      catch(SQLException e){
-        e.printStackTrace();
-      }
-      finally{
-        try{
-          if(stmt!=null)
+   }catch(SQLException se){
+      se.printStackTrace();
+   }catch(Exception e){
+      e.printStackTrace();
+   }finally{
+      try{
+         if(stmt!=null)
             stmt.close();
-         }
-         catch(SQLException se2){
-         }
-         try{
+      }catch(SQLException se2){
+      }
+      try{
          if(conn!=null)
             conn.close();
-         }
-         catch(SQLException se){
+      }catch(SQLException se){
          se.printStackTrace();
-         }
-       }
+      }
+   }
     }
 }
          
